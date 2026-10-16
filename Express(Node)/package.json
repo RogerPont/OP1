@@ -1,4 +1,20 @@
 {
+  "name": "api-express-productes",
+  "version": "1.0.0",
+  "description": "API REST de productes amb Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "http",
+    "api",
+    "fp"
+  ],
+  "author": "Crow",
+  "license": "ISC",
   "dependencies": {
     "express": "^5.3.0"
   }

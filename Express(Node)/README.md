@@ -24,7 +24,13 @@ API REST senzilla feta amb Node.js i Express per gestionar una llista de product
 3. **Arrencar el servidor**:
 
    ```bash
-   node app.js
+   npm start
+   ```
+
+   O en mode desenvolupament (es reinicia sol en canviar `app.js`):
+
+   ```bash
+   npm run dev
    ```
 
 4. **Comprovar que funciona**. Hauries de veure:
@@ -58,6 +64,26 @@ curl -X POST http://localhost:3000/api/productes \
 ```
 
 Camps obligatoris: `nom` (text) i `preu` (nombre). Opcionals: `categoria` i `stock`.
+
+En PowerShell, usa `curl.exe` i escapa les cometes:
+
+```powershell
+curl.exe -X POST http://localhost:3000/api/productes -H "Content-Type: application/json" -d '{\"nom\":\"Altaveu\",\"preu\":60,\"categoria\":\"Àudio\",\"stock\":12}'
+```
+
+### Format de les respostes
+
+Èxit:
+
+```json
+{ "estat": "success", "missatge": "Producte afegit correctament", "data": { } }
+```
+
+Error:
+
+```json
+{ "estat": "error", "missatge": "Producte no trobat" }
+```
 
 ## Notes
 
