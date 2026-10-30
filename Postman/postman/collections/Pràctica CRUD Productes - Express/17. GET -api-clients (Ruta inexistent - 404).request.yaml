@@ -1,0 +1,5 @@
+$kind: http-request
+name: 17. GET /api/clients (Ruta inexistent - 404)
+url: http://localhost:3000/api/clients
+method: GET
+order: 17000

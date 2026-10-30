@@ -63,7 +63,7 @@ curl -X POST http://localhost:3000/api/productes \
   -d '{"nom": "Altaveu", "preu": 60, "categoria": "Àudio", "stock": 12}'
 ```
 
-Camps obligatoris: `nom` (text) i `preu` (nombre). Opcionals: `categoria` i `stock`.
+Camps obligatoris: `nom` (text), `preu` (nombre) i `categoria` (text). Opcional: `stock`.
 
 En PowerShell, usa `curl.exe` i escapa les cometes:
 

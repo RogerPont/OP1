@@ -1,0 +1,16 @@
+$kind: http-request
+name: 11. PUT /api/productes/1 (Dades correctes - 200)
+url: http://localhost:3000/api/productes/1
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nom": "Portàtil Pro",
+      "preu": 1350,
+      "categoria": "Ordinadors",
+      "stock": 8
+    }
+order: 11000

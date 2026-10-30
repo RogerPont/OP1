@@ -1,0 +1,15 @@
+$kind: http-request
+name: 10. POST /api/productes (JSON mal format sense clau final - 400)
+url: http://localhost:3000/api/productes
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nom": " Producte",
+      "preu": 20,
+      "categoria": "Test",
+      "stock": 5
+order: 10000

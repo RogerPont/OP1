@@ -1,0 +1,16 @@
+$kind: http-request
+name: 7. POST /api/productes (Preu negatiu o entre cometes - 400)
+url: http://localhost:3000/api/productes
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nom": "Càmera",
+      "preu": "29.99",
+      "categoria": "Vídeo",
+      "stock": 10
+    }
+order: 7000

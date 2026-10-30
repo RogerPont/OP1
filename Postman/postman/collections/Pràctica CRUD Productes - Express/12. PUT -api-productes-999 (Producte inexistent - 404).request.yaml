@@ -1,0 +1,16 @@
+$kind: http-request
+name: 12. PUT /api/productes/999 (Producte inexistent - 404)
+url: http://localhost:3000/api/productes/999
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nom": "Portàtil Pro",
+      "preu": 1350,
+      "categoria": "Ordinadors",
+      "stock": 8
+    }
+order: 12000

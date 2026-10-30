@@ -1,0 +1,16 @@
+$kind: http-request
+name: 5. POST /api/productes (Dades correctes - 201)
+url: http://localhost:3000/api/productes
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nom": "Altaveu Bluetooth",
+      "preu": 59.99,
+      "categoria": "Àudio",
+      "stock": 15
+    }
+order: 5000
