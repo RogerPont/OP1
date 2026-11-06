@@ -1,5 +1,4 @@
 $kind: http-request
-name: 1. GET /api/productes (Llista tots els productes - 200)
 url: http://localhost:3000/api/productes
 method: GET
 order: 1000

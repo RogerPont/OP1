@@ -176,7 +176,7 @@ app.delete("/api/productes/:id", (req, res) => {
 app.use((req, res) => {
     res.status(404).json({
         estat: "error",
-        missatge: "Ruta no trobada",
+        missatge: "Ruta no trobada",    
         ruta: req.originalUrl
     });
 });

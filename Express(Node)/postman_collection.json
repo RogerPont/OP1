@@ -2,374 +2,393 @@
   "info": {
     "_postman_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
     "name": "Pràctica CRUD Productes - Express",
-    "description": "Col·lecció amb les 17 proves del checklist de la pràctica CRUD amb Express",
+    "description": "Col·lecció ordenada per operacions CRUD amb les 17 proves del checklist",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
-      "name": "1. GET /api/productes (Llista tots els productes - 200)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/productes",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes"]
-        }
-      }
-    },
-    {
-      "name": "2. GET /api/productes/1 (Producte 1 - 200)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/productes/1",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "1"]
-        }
-      }
-    },
-    {
-      "name": "3. GET /api/productes/999 (Producte inexistent - 404)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/productes/999",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "999"]
-        }
-      }
-    },
-    {
-      "name": "4. GET /api/productes/abc (ID no vàlid - 400)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/productes/abc",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "abc"]
-        }
-      }
-    },
-    {
-      "name": "5. POST /api/productes (Dades correctes - 201)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \"Altaveu Bluetooth\",\n  \"preu\": 59.99,\n  \"categoria\": \"Àudio\",\n  \"stock\": 15\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+      "name": "1. Consultar productes (GET)",
+      "item": [
+        {
+          "name": "1. Llistar tots els productes (200)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/productes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes"]
-        }
-      }
-    },
-    {
-      "name": "6. POST /api/productes (Nom buit o només espais - 400)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \"   \",\n  \"preu\": 50,\n  \"categoria\": \"Perifèrics\",\n  \"stock\": 10\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "2. Obtenir producte 1 (200)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/productes/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "1"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes"]
-        }
-      }
-    },
-    {
-      "name": "7. POST /api/productes (Preu negatiu o entre cometes - 400)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \"Càmera\",\n  \"preu\": \"29.99\",\n  \"categoria\": \"Vídeo\",\n  \"stock\": 10\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "3. Producte inexistent /999 (404)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/productes/999",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "999"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes"]
-        }
-      }
-    },
-    {
-      "name": "8. POST /api/productes (Stock decimal 2.5 - 400)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \"Micròfon\",\n  \"preu\": 80,\n  \"categoria\": \"Àudio\",\n  \"stock\": 2.5\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "4. ID no vàlid /abc (400)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/productes/abc",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "abc"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes"]
+        {
+          "name": "17. Ruta inexistent /api/clients (404)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/clients",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "clients"]
+            }
+          }
         }
-      }
+      ]
     },
     {
-      "name": "9. POST /api/productes (Diversos camps incorrectes alhora - 400)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \"\",\n  \"preu\": -10,\n  \"categoria\": \"   \",\n  \"stock\": -5\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+      "name": "2. Afegir productes (POST)",
+      "item": [
+        {
+          "name": "5. Crear producte correcte (201)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Altaveu Bluetooth\",\n  \"preu\": 59.99,\n  \"categoria\": \"Àudio\",\n  \"stock\": 15\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes"]
-        }
-      }
-    },
-    {
-      "name": "10. POST /api/productes (JSON mal format sense clau final - 400)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \" Producte\",\n  \"preu\": 20,\n  \"categoria\": \"Test\",\n  \"stock\": 5",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "6. Nom buit o només espais (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"   \",\n  \"preu\": 50,\n  \"categoria\": \"Perifèrics\",\n  \"stock\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes"]
-        }
-      }
-    },
-    {
-      "name": "11. PUT /api/productes/1 (Dades correctes - 200)",
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \"Portàtil Pro\",\n  \"preu\": 1350,\n  \"categoria\": \"Ordinadors\",\n  \"stock\": 8\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "7. Preu negatiu o entre cometes (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Càmera\",\n  \"preu\": \"29.99\",\n  \"categoria\": \"Vídeo\",\n  \"stock\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes/1",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "1"]
-        }
-      }
-    },
-    {
-      "name": "12. PUT /api/productes/999 (Producte inexistent - 404)",
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \"Portàtil Pro\",\n  \"preu\": 1350,\n  \"categoria\": \"Ordinadors\",\n  \"stock\": 8\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "8. Stock decimal 2.5 (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Micròfon\",\n  \"preu\": 80,\n  \"categoria\": \"Àudio\",\n  \"stock\": 2.5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes/999",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "999"]
-        }
-      }
-    },
-    {
-      "name": "13. PUT /api/productes/1 (Dades incorrectes - 400)",
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"nom\": \"\",\n  \"preu\": -50,\n  \"categoria\": \"Ordinadors\",\n  \"stock\": 1.5\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "9. Diversos camps incorrectes (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"\",\n  \"preu\": -10,\n  \"categoria\": \"   \",\n  \"stock\": -5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes"]
             }
           }
         },
-        "url": {
-          "raw": "http://localhost:3000/api/productes/1",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "1"]
+        {
+          "name": "10. JSON mal format sense } (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Producte\",\n  \"preu\": 20,\n  \"categoria\": \"Test\",\n  \"stock\": 5",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes"]
+            }
+          }
         }
-      }
+      ]
     },
     {
-      "name": "14. DELETE /api/productes/2 (Eliminar producte 2 - 200)",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/productes/2",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "2"]
+      "name": "3. Actualitzar productes (PUT)",
+      "item": [
+        {
+          "name": "11. Actualitzar producte 1 (200)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Portàtil Pro\",\n  \"preu\": 1350,\n  \"categoria\": \"Ordinadors\",\n  \"stock\": 8\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "1"]
+            }
+          }
+        },
+        {
+          "name": "12. Actualitzar inexistent /999 (404)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Portàtil Pro\",\n  \"preu\": 1350,\n  \"categoria\": \"Ordinadors\",\n  \"stock\": 8\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes/999",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "999"]
+            }
+          }
+        },
+        {
+          "name": "13. Actualitzar amb dades errònies (400)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"\",\n  \"preu\": -50,\n  \"categoria\": \"Ordinadors\",\n  \"stock\": 1.5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/productes/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "1"]
+            }
+          }
         }
-      }
+      ]
     },
     {
-      "name": "15. GET /api/productes/2 (Després d'esborrar-lo - 404)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/productes/2",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "2"]
+      "name": "4. Eliminar productes (DELETE)",
+      "item": [
+        {
+          "name": "14. Eliminar producte 2 (200)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/productes/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "2"]
+            }
+          }
+        },
+        {
+          "name": "15. Comprovar producte 2 esborrat (404)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/productes/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "2"]
+            }
+          }
+        },
+        {
+          "name": "16. Eliminar inexistent /999 (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/productes/999",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productes", "999"]
+            }
+          }
         }
-      }
-    },
-    {
-      "name": "16. DELETE /api/productes/999 (Producte inexistent - 404)",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/productes/999",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "productes", "999"]
-        }
-      }
-    },
-    {
-      "name": "17. GET /api/clients (Ruta inexistent - 404)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/clients",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "clients"]
-        }
-      }
+      ]
     }
   ]
 }
-

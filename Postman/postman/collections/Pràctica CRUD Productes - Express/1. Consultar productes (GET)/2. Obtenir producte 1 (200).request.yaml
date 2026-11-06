@@ -1,5 +1,4 @@
 $kind: http-request
-name: 2. GET /api/productes/1 (Producte 1 - 200)
 url: http://localhost:3000/api/productes/1
 method: GET
 order: 2000

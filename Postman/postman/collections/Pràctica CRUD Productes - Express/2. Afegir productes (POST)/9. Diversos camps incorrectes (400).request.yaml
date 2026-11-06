@@ -1,5 +1,4 @@
 $kind: http-request
-name: 9. POST /api/productes (Diversos camps incorrectes alhora - 400)
 url: http://localhost:3000/api/productes
 method: POST
 headers:
@@ -13,4 +12,4 @@ body:
       "categoria": "   ",
       "stock": -5
     }
-order: 9000
+order: 5000

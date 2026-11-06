@@ -6,7 +6,7 @@ workspace:
 
 cloudResources:
   collections:
-    ../postman/collections/Pràctica CRUD Productes - Express: 1a9d8b13-a362-4560-9a1a-7d28c1a2548c
+    ../postman/collections/Pràctica CRUD Productes - Express: 85597d69-b3e0-4da2-8014-89c2eb41cd06
 
 # All resources in the `postman/` folder are automatically registered in Local View.
 # Point to additional files outside the `postman/` folder to register them individually. Example:

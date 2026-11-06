@@ -1,5 +1,4 @@
 $kind: http-request
-name: 8. POST /api/productes (Stock decimal 2.5 - 400)
 url: http://localhost:3000/api/productes
 method: POST
 headers:
@@ -8,9 +7,9 @@ body:
   type: json
   content: |-
     {
-      "nom": "Micròfon",
-      "preu": 80,
+      "nom": "Altaveu Bluetooth",
+      "preu": 59.99,
       "categoria": "Àudio",
-      "stock": 2.5
+      "stock": 15
     }
-order: 8000
+order: 1000

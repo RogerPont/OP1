@@ -1,6 +1,6 @@
 $kind: http-request
-name: 11. PUT /api/productes/1 (Dades correctes - 200)
-url: http://localhost:3000/api/productes/1
+name: 12. Actualitzar inexistent /999 (404)
+url: http://localhost:3000/api/productes/999
 method: PUT
 headers:
   Content-Type: application/json
@@ -13,4 +13,4 @@ body:
       "categoria": "Ordinadors",
       "stock": 8
     }
-order: 11000
+order: 2000

@@ -1,5 +1,4 @@
 $kind: http-request
-name: 7. POST /api/productes (Preu negatiu o entre cometes - 400)
 url: http://localhost:3000/api/productes
 method: POST
 headers:
@@ -13,4 +12,4 @@ body:
       "categoria": "Vídeo",
       "stock": 10
     }
-order: 7000
+order: 3000

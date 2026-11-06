@@ -1,5 +1,4 @@
 $kind: http-request
-name: 6. POST /api/productes (Nom buit o només espais - 400)
 url: http://localhost:3000/api/productes
 method: POST
 headers:
@@ -13,4 +12,4 @@ body:
       "categoria": "Perifèrics",
       "stock": 10
     }
-order: 6000
+order: 2000

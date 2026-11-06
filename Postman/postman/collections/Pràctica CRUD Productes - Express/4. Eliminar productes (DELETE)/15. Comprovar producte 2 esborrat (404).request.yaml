@@ -1,5 +1,4 @@
 $kind: http-request
-name: 15. GET /api/productes/2 (Després d'esborrar-lo - 404)
 url: http://localhost:3000/api/productes/2
 method: GET
-order: 15000
+order: 2000

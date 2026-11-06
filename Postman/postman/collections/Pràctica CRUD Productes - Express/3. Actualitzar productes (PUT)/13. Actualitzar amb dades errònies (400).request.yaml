@@ -1,5 +1,4 @@
 $kind: http-request
-name: 13. PUT /api/productes/1 (Dades incorrectes - 400)
 url: http://localhost:3000/api/productes/1
 method: PUT
 headers:
@@ -13,4 +12,4 @@ body:
       "categoria": "Ordinadors",
       "stock": 1.5
     }
-order: 13000
+order: 3000
