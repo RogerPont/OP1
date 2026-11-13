@@ -1,0 +1,208 @@
+{
+  "info": {
+    "_postman_id": "b0a77d9a-2076-499c-a1fb-074d6198ddd9",
+    "name": "ServerNODE",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58523306",
+    "_collection_link": "https://go.postman.co/collection/58523306-b0a77d9a-2076-499c-a1fb-074d6198ddd9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/data",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "data"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/usuari )=Èxit",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nom\": \"Joan Garcia\", \r\n    \"email\": \"joan@exemple.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/usuari",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "usuari"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/usuari )=NomCurt",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nom\": \"J\", \r\n    \"email\": \"joan@exemple.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/usuari",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "usuari"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/usuari )= Email Invalid",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nom\": \"Joan Garcia\", \r\n    \"email\": \"amailpuntcom\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/usuari",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "usuari"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/usuari )= JSON Invalid",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nom\": \"Ferran\",",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/usuari",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "usuari"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/info",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "info"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calculadora (multiplicacio)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/calculadora/multiplicacio/7/8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "calculadora",
+            "multiplicacio",
+            "7",
+            "8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calculadora (divisió per zero)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/calculadora/divisio/10/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "calculadora",
+            "divisio",
+            "10",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
